@@ -1,15 +1,13 @@
 Package: bios6312
-Title: What the Package Does (One Line, Title Case)
+Title: Functions for BIOS6312
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Maximilian",
+           family = "Rohde",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "maxdrohde@gmail.com")
+Description: Functions for BIOS6312 to mimic some of the functionality in Stata.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
