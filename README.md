@@ -4,5 +4,6 @@ R functions for BIOS6312 at Vanderbilt University
 To install, run the following:
 
 ```
-remotes::install_github("maxdrohde/bios6312")
+install.packages("devtools")
+devtools::install_github("maxdrohde/bios6312")
 ```
