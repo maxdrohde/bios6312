@@ -3,5 +3,5 @@ R functions for BIOS6312 at Vanderbilt University
 To install, run the following:
 
 ```
-remotes::install_github("r-lib/conflicted")
+remotes::install_github("maxdrohde/bios6312")
 ```
