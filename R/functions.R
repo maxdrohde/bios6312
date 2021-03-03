@@ -48,7 +48,7 @@ get_studentized_residuals <- function(model){
   ## Estimate error variance
   sigma.hat <- stats::sd(model$residuals)
   ## Create hat matrix
-  dsn.X <- cbind(1, model$model$age)
+  dsn.X <- cbind(1, model$model[[2]])
   H <- dsn.X %*% solve(t(dsn.X) %*% dsn.X) %*% t(dsn.X)
   ## Diagonal entries (leverage)
   lvg <- diag(H)

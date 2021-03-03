@@ -1,0 +1,30 @@
+---
+title: "Documentation"
+author: "Max Rohde"
+date: "3/3/2021"
+output: html_document
+---
+
+```{r}
+library(bios6312)
+```
+
+```{r}
+head(mtcars)
+```
+
+```{r}
+my_model <- lm(mpg~wt, data=mtcars)
+
+summary(my_model)
+```
+
+```{r}
+get_robust_variance(my_model)
+```
+
+```{r}
+get_studentized_residuals(my_model)
+```
+
+
