@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/733374/37e81d4183984c7886e5f920f9c09e3f
+bundleId: https://api.rpubs.com/api/v1/document/733374/37e81d4183984c7886e5f920f9c09e3f
+url: http://rpubs.com/maxdrohde/733374
+when: 1614757474.7185

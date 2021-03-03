@@ -54,6 +54,8 @@ studentized_residuals_vs_predictors_plot(my_model)
 ```
 
 
+For the next functions, we will need to use a model with interactions.
+
 ```{r}
 my_interaction_model <- lm(mpg ~ wt*cyl, data=mtcars)
 
