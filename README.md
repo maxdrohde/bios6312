@@ -7,3 +7,5 @@ To install, run the following:
 install.packages("devtools")
 devtools::install_github("maxdrohde/bios6312")
 ```
+
+For examples of how to use the functions: see [here](test.pdf)
