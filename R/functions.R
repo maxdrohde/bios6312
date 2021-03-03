@@ -182,6 +182,8 @@ testparm <- function(par, model, type = "F") {
 #'
 #' Inputs a linear model from the `lm` function and set of indices and
 #' multipliers for a set of coefficients. Return the estimate, CI and p-value.
+#' In other words, from the STATA docs, computes point estimates... p-values,
+#' and confidence intervals for linear combinations of coefficients.
 #' NOTE: For the indices in `par`, beta0 = 1, beta1 = 2, and so on.
 #'
 #' @param par  A vector specifying the indices of coefficients

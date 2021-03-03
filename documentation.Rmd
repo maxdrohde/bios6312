@@ -9,6 +9,20 @@ output: html_document
 library(bios6312)
 ```
 
+The following function are available:
+
+- `get_robust_variance`
+- `get_studentized_residuals`
+- `qqnorm_studentized_residuals`
+- `studentized_residuals_vs_fitted_plot`
+- `studentized_residuals_vs_predictors_plot`
+- `testparm`
+- `lincom`
+
+To get help on any function, you can access the documentation with `?example_function`.
+
+We will use the built-in `mtcars` dataset to demonstrate each function.
+
 ```{r}
 head(mtcars)
 ```
@@ -27,4 +41,38 @@ get_robust_variance(my_model)
 get_studentized_residuals(my_model)
 ```
 
+```{r}
+qqnorm_studentized_residuals(my_model)
+```
+
+```{r}
+studentized_residuals_vs_fitted_plot(my_model)
+```
+
+```{r}
+studentized_residuals_vs_predictors_plot(my_model)
+```
+
+
+```{r}
+my_interaction_model <- lm(mpg ~ wt*cyl, data=mtcars)
+
+summary(my_interaction_model)
+```
+
+```{r}
+# Replicates the `testparm` function in Stata
+# Test if beta2 + beta3 == 0
+testparm(par=c(3,4),
+         model=my_interaction_model,
+         type="F")
+```
+
+```{r}
+# Replicates the `lincom` function in Stata
+# Estimates beta2 + 3.2beta3
+lincom(par=c(3,4),
+       mult=c(1,3.2),
+       model=my_interaction_model)
+```
 
