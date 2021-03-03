@@ -178,21 +178,21 @@ testparm <- function(par, model, type = "F") {
 }
 
 ##################################################
-#' Test the hypothesis that a set of coefficients are equal to zero
+#' Analyzing subgroup effects with a continuous modifier
 #'
-#' Inputs a linear model from the lm function and set of indices for
-#' coefficients. Tests the hypothesis the specified set of coefficients
-#' are equal to zero. NOTE: beta0 = 1, beta1 = 2, and so on.
+#' Inputs a linear model from the `lm` function and set of indices and
+#' multipliers for a set of coefficients. Return the estimate, CI and p-value.
+#' NOTE: For the indices in `par`, beta0 = 1, beta1 = 2, and so on.
 #'
-#' @param par XXXX
-#' @param mults XXX
+#' @param par  A vector specifying the indices of coefficients
+#' @param mults A vector of multipliers
 #' @param model An lm object
-#' @param alpha XXX
+#' @param alpha The alpha level for the CIs and p-values
 #'
-#' @return A vector containing the test statistic and p-value
+#' @return A vector containing the estimate, CI, and p-value
 #' @export
 #' @examples
-#' # Tests beta1 + 7.5*beta3
+#' # Testing beta1 + 7.5*beta3
 #' # lincom(par = c(2,4),
 #' #        mults = c(1,7.5),
 #' #        model=my_linear_model)

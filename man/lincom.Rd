@@ -2,30 +2,30 @@
 % Please edit documentation in R/functions.R
 \name{lincom}
 \alias{lincom}
-\title{Test the hypothesis that a set of coefficients are equal to zero}
+\title{Analyzing subgroup effects with a continuous modifier}
 \usage{
 lincom(par, mults, model, alpha = 0.05)
 }
 \arguments{
-\item{par}{XXXX}
+\item{par}{A vector specifying the indices of coefficients}
 
-\item{mults}{XXX}
+\item{mults}{A vector of multipliers}
 
 \item{model}{An lm object}
 
-\item{alpha}{XXX}
+\item{alpha}{The alpha level for the CIs and p-values}
 }
 \value{
-A vector containing the test statistic and p-value
+A vector containing the estimate, CI, and p-value
 }
 \description{
-Inputs a linear model from the lm function and set of indices for
-coefficients. Tests the hypothesis the specified set of coefficients
-are equal to zero. NOTE: beta0 = 1, beta1 = 2, and so on.
+Inputs a linear model from the \code{lm} function and set of indices and
+multipliers for a set of coefficients. Return the estimate, CI and p-value.
+NOTE: For the indices in \code{par}, beta0 = 1, beta1 = 2, and so on.
 }
 \examples{
-# Tests if
+# Testing beta1 + 7.5*beta3
 # lincom(par = c(2,4),
 #        mults = c(1,7.5),
-#        model=regr.a1c)
+#        model=my_linear_model)
 }
